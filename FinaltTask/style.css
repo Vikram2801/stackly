@@ -1,0 +1,250 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f6f8;
+    color: #222;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 30px auto;
+}
+
+
+/* HEADER */
+
+header {
+    background: #1e293b;
+    color: white;
+    padding: 25px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+header h1 {
+    margin-bottom: 10px;
+}
+
+.datetime {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    font-size: 14px;
+}
+
+
+/* SEARCH */
+
+.search-section {
+    margin-top: 25px;
+    display: flex;
+    gap: 10px;
+}
+
+.search-section input {
+    flex: 1;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+button {
+    border: none;
+    cursor: pointer;
+    border-radius: 6px;
+    padding: 10px 18px;
+}
+
+
+/* FILTER */
+
+.filter-section {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin: 20px 0;
+}
+
+.department-btn {
+    background: #e2e8f0;
+}
+
+.department-btn.active {
+    background: #2563eb;
+    color: white;
+}
+
+
+/* STATUS */
+
+#statusMessage {
+    margin: 15px 0;
+    font-weight: bold;
+}
+
+
+/* DASHBOARD */
+
+.dashboard {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    margin: 20px 0;
+}
+
+.dashboard-box {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.dashboard-box h3 {
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+.dashboard-box p {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+
+/* SORT */
+
+.sort-section {
+    margin: 20px 0;
+}
+
+.sort-section select {
+    padding: 10px;
+    margin-left: 10px;
+}
+
+
+/* EMPLOYEE GRID */
+
+.employee-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+
+/* CARD */
+
+.employee-card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.employee-card img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto 15px;
+}
+
+.employee-card h3 {
+    text-align: center;
+    margin-bottom: 12px;
+}
+
+.employee-card p {
+    margin: 7px 0;
+}
+
+.delete-btn {
+    width: 100%;
+    margin-top: 15px;
+    background: #dc2626;
+    color: white;
+}
+
+
+/* ADD EMPLOYEE */
+
+.add-section {
+    background: white;
+    margin-top: 40px;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.add-section h2 {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.form-group {
+    margin-bottom: 18px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+.form-group small {
+    display: block;
+    color: red;
+    margin-top: 5px;
+}
+
+.add-btn {
+    width: 100%;
+    background: #16a34a;
+    color: white;
+    font-size: 16px;
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 900px) {
+
+    .dashboard {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .employee-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .dashboard {
+        grid-template-columns: 1fr;
+    }
+
+    .employee-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .search-section {
+        flex-direction: column;
+    }
+}
