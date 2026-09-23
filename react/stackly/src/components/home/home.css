@@ -1,0 +1,227 @@
+.home-page {
+  min-height: 100vh;
+  width: 100%;
+  padding: 40px 50px 60px;
+  background:
+    radial-gradient(
+      circle at 10% 0%,
+      rgba(99, 102, 241, 0.12),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 90% 20%,
+      rgba(139, 92, 246, 0.08),
+      transparent 30%
+    ),
+    #080b14;
+  color: #f8fafc;
+}
+
+.home-header {
+  max-width: 1200px;
+  margin: 0 auto 35px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+.home-label {
+  margin: 0 0 8px;
+  color: #818cf8;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+.home-header h1 {
+  margin: 0;
+  color: #f8fafc;
+  font-size: 34px;
+  font-weight: 700;
+}
+.home-header h1 span {
+  color: #818cf8;
+}
+.home-description {
+  margin: 8px 0 0;
+  color: #94a3b8;
+  font-size: 14px;
+}
+/* =========================
+   LOGOUT
+========================= */
+.logout-button {
+  padding: 11px 20px;
+  border: 1px solid rgba(248, 113, 113, 0.3);
+  border-radius: 10px;
+  background: rgba(127, 29, 29, 0.12);
+  color: #fca5a5;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+.logout-button:hover {
+  background: rgba(127, 29, 29, 0.3);
+  border-color: rgba(248, 113, 113, 0.6);
+  transform: translateY(-2px);
+}
+/* =========================
+   TASK NAVIGATION
+========================= */
+.task-navigation {
+  max-width: 1200px;
+  margin: 0 auto 25px;
+  display: flex;
+  gap: 8px;
+  padding: 8px;
+  background: rgba(15, 23, 42, 0.75);
+  border: 1px solid rgba(148, 163, 184, 0.12);
+  border-radius: 16px;
+  backdrop-filter: blur(12px);
+}
+/* Task Button */
+.task-button {
+  position: relative;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 15px 20px;
+  border: 1px solid transparent;
+  border-radius: 11px;
+  background: transparent;
+  color: #94a3b8;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition:
+    background 0.25s ease,
+    color 0.25s ease,
+    transform 0.25s ease;
+}
+.task-button span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 8px;
+  background: rgba(148, 163, 184, 0.08);
+  color: #64748b;
+  font-size: 11px;
+  font-weight: 700;
+  transition: all 0.25s ease;
+}
+.task-button:hover {
+  background: rgba(99, 102, 241, 0.08);
+  color: #e2e8f0;
+}
+.task-button:hover span {
+  background: rgba(99, 102, 241, 0.15);
+  color: #818cf8;
+}
+/* Active Button */
+.task-button.active {
+  background: linear-gradient(
+    135deg,
+    #6366f1,
+    #7c3aed
+  );
+  color: #ffffff;
+  border-color: rgba(139, 92, 246, 0.5);
+  box-shadow:
+    0 8px 25px rgba(99, 102, 241, 0.25);
+}
+.task-button.active span {
+  background: rgba(255, 255, 255, 0.15);
+  color: #ffffff;
+}
+.current-task {
+  max-width: 1200px;
+  margin: 0 auto 25px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 18px 22px;
+  background: rgba(15, 23, 42, 0.5);
+  border: 1px solid rgba(148, 163, 184, 0.1);
+  border-radius: 14px;
+}
+.current-task > span {
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border-radius: 11px;
+  background: rgba(99, 102, 241, 0.12);
+  color: #818cf8;
+  font-size: 12px;
+  font-weight: 700;
+}
+.current-task small {
+  display: block;
+  margin-bottom: 3px;
+  color: #64748b;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+.current-task h2 {
+  margin: 0;
+  color: #e2e8f0;
+  font-size: 18px;
+}
+/* =========================
+   TASK CONTENT
+========================= */
+.task-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-bottom: 30px;
+}
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 768px) {
+  .home-page {
+    padding: 25px 20px 40px;
+  }
+  .home-header {
+    align-items: flex-start;
+    flex-direction: column;
+    margin-bottom: 25px;
+  }
+  .home-header h1 {
+    font-size: 28px;
+  }
+  .logout-button {
+    width: 100%;
+  }
+  .task-navigation {
+    flex-direction: column;
+  }
+  .task-button {
+    width: 100%;
+    justify-content: flex-start;
+  }
+}
+@media (max-width: 480px) {
+  .home-page {
+    padding: 20px 15px 30px;
+  }
+  .home-header h1 {
+    font-size: 24px;
+  }
+  .home-description {
+    font-size: 13px;
+  }
+  .current-task {
+    padding: 14px;
+  }
+  .current-task h2 {
+    font-size: 16px;
+  }
+}
