@@ -1,5 +1,5 @@
-
 import { useState } from "react";
+import { Sun, Moon, Plus, Minus, RotateCcw, Hash } from "lucide-react";
 import "./Task4.css";
 
 function Task4() {
@@ -34,44 +34,57 @@ function Task4() {
         </div>
 
         <button className="theme-toggle" onClick={toggleTheme}>
-          {isDarkTheme ? "☀️ Light Theme" : "🌙 Dark Theme"}
+          {isDarkTheme ? (
+            <>
+              <Sun size={18} />
+              Light Theme
+            </>
+          ) : (
+            <>
+              <Moon size={18} />
+              Dark Theme
+            </>
+          )}
         </button>
       </div>
 
       <div className="task4-content">
         {/* Counter */}
         <div className="task4-card">
-          <div className="card-icon">🔢</div>
+          <div className="card-icon">
+  <Hash size={22} />
+</div>
 
           <p className="card-label">COUNTER</p>
 
           <h3>Counter Application</h3>
 
-          <div className="count">
-            {count}
-          </div>
+          <div className="count">{count}</div>
 
           <div className="counter-buttons">
-            <button
-              className="btn decrement"
-              onClick={decrement}
-            >
-              − Decrement
-            </button>
+           <button
+  className="btn decrement"
+  onClick={decrement}
+>
+  <Minus size={16} />
+  Decrement
+</button>
 
             <button
-              className="btn reset"
-              onClick={reset}
-            >
-              Reset
-            </button>
+  className="btn reset"
+  onClick={reset}
+>
+  <RotateCcw size={16} />
+  Reset
+</button>
 
             <button
-              className="btn increment"
-              onClick={increment}
-            >
-              + Increment
-            </button>
+  className="btn increment"
+  onClick={increment}
+>
+  <Plus size={16} />
+  Increment
+</button>
           </div>
 
           <p className="current-count">
@@ -81,43 +94,46 @@ function Task4() {
 
         {/* Theme */}
         <div className="task4-card">
-          <div className="card-icon">
-            {isDarkTheme ? "🌙" : "☀️"}
-          </div>
+          <span className="status-icon">
+  {isDarkTheme ? <Moon size={20} /> : <Sun size={20} />}
+</span>
 
           <p className="card-label">THEME TOGGLE</p>
 
-          <h3>
-            {isDarkTheme ? "Dark Theme" : "Light Theme"}
-          </h3>
+          <h3>{isDarkTheme ? "Dark Theme" : "Light Theme"}</h3>
 
           <p className="theme-text">
-            Click the button below to switch between
-            light and dark themes.
+            Click the button below to switch between light and dark themes.
           </p>
 
           <div className="theme-status">
             <span className="status-icon">
-              {isDarkTheme ? "🌙" : "☀️"}
-            </span>
+  {isDarkTheme ? <Moon size={20} /> : <Sun size={20} />}
+</span>
 
             <div>
               <small>Current Theme</small>
 
-              <strong>
-                {isDarkTheme ? "Dark Mode" : "Light Mode"}
-              </strong>
+              <strong>{isDarkTheme ? "Dark Mode" : "Light Mode"}</strong>
             </div>
           </div>
 
           <button
-            className="switch-theme"
-            onClick={toggleTheme}
-          >
-            {isDarkTheme
-              ? "☀️ Switch to Light"
-              : "🌙 Switch to Dark"}
-          </button>
+  className="switch-theme"
+  onClick={toggleTheme}
+>
+  {isDarkTheme ? (
+    <>
+      <Sun size={17} />
+      Switch to Light
+    </>
+  ) : (
+    <>
+      <Moon size={17} />
+      Switch to Dark
+    </>
+  )}
+</button>
         </div>
       </div>
 
@@ -138,4 +154,3 @@ function Task4() {
 }
 
 export default Task4;
-

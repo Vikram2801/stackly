@@ -317,3 +317,24 @@
     font-size: 48px;
   }
 }
+
+.theme-toggle,
+.btn,
+.switch-theme {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.card-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.status-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
