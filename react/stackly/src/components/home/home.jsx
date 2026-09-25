@@ -1,7 +1,8 @@
 import SelfIntroduction from "../selfIntroduction/SelfIntroduction";
 import ParentComponent from "../parentComponent/parentComponent";
 import UserList from "../userList/userList";
-import Task4 from "../Task4/task4"
+import Task4 from "../Task4/task4";
+import Task5 from "../task5/task5";
 
 import "./Home.css";
 
@@ -59,19 +60,26 @@ function Home({ selectedTask, setSelectedTask, onLogout }) {
           <span>03</span>
           User List
         </button>
-        
-        <button
-  className={
-    selectedTask === "task4"
-      ? "task-button active"
-      : "task-button"
-  }
-  onClick={() => setSelectedTask("task4")}
->
-  <span>04</span>
-  useState
-</button>
 
+        <button
+          className={
+            selectedTask === "task4" ? "task-button active" : "task-button"
+          }
+          onClick={() => setSelectedTask("task4")}
+        >
+          <span>04</span>
+          useState
+        </button>
+
+        <button
+          className={
+            selectedTask === "task5" ? "task-button active" : "task-button"
+          }
+          onClick={() => setSelectedTask("task5")}
+        >
+          <span>05</span>
+          Form
+        </button>
       </div>
 
       {/* TASK TITLE */}
@@ -117,7 +125,9 @@ function Home({ selectedTask, setSelectedTask, onLogout }) {
 
         {selectedTask === "task3" && <UserList />}
 
-        {selectedTask === "task4" && <Task4/>}
+        {selectedTask === "task4" && <Task4 />}
+        
+        {selectedTask === "task5" && <Task5 />}
       </main>
     </div>
   );
