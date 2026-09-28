@@ -5,6 +5,7 @@ import Task4 from "../Task4/task4";
 import Task5 from "../task5/task5";
 
 import "./Home.css";
+import Task6 from "../task6/task6";
 
 function Home({ selectedTask, setSelectedTask, onLogout }) {
   return (
@@ -71,6 +72,8 @@ function Home({ selectedTask, setSelectedTask, onLogout }) {
           useState
         </button>
 
+        
+
         <button
           className={
             selectedTask === "task5" ? "task-button active" : "task-button"
@@ -79,6 +82,16 @@ function Home({ selectedTask, setSelectedTask, onLogout }) {
         >
           <span>05</span>
           Form
+        </button>
+
+        <button
+          className={
+            selectedTask === "task6" ? "task-button active" : "task-button"
+          }
+          onClick={() => setSelectedTask("task6")}
+        >
+          <span>06</span>
+          useEffectApi
         </button>
       </div>
 
@@ -114,6 +127,33 @@ function Home({ selectedTask, setSelectedTask, onLogout }) {
             </div>
           </>
         )}
+        {selectedTask === "task4" && (
+          <>
+            <span>04</span>
+            <div>
+              <small>TASK 4</small>
+              <h2>UseState Hook</h2>
+            </div>
+          </>
+        )}
+        {selectedTask === "task5" && (
+          <>
+            <span>05</span>
+            <div>
+              <small>TASK 5</small>
+              <h2>Form Handling</h2>
+            </div>
+          </>
+        )}
+        {selectedTask === "task6" && (
+          <>
+            <span>06</span>
+            <div>
+              <small>TASK 6</small>
+              <h2>UseEffect and useRef</h2>
+            </div>
+          </>
+        )}
       </div>
 
       {/* TASK CONTENT */}
@@ -128,6 +168,9 @@ function Home({ selectedTask, setSelectedTask, onLogout }) {
         {selectedTask === "task4" && <Task4 />}
         
         {selectedTask === "task5" && <Task5 />}
+
+         {selectedTask === "task6" && <Task6 />}
+        
       </main>
     </div>
   );
