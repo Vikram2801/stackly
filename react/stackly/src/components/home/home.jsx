@@ -6,6 +6,7 @@ import Task5 from "../task5/task5";
 
 import "./Home.css";
 import Task6 from "../task6/task6";
+import Task7 from "../Task7/Task7";
 
 function Home({ selectedTask, setSelectedTask, onLogout }) {
   return (
@@ -93,6 +94,16 @@ function Home({ selectedTask, setSelectedTask, onLogout }) {
           <span>06</span>
           useEffectApi
         </button>
+
+         <button
+          className={
+            selectedTask === "task7" ? "task-button active" : "task-button"
+          }
+          onClick={() => setSelectedTask("task7")}
+        >
+          <span>07</span>
+          useContext and useReducer
+        </button>
       </div>
 
       {/* TASK TITLE */}
@@ -154,6 +165,16 @@ function Home({ selectedTask, setSelectedTask, onLogout }) {
             </div>
           </>
         )}
+
+         {selectedTask === "task7" && (
+          <>
+            <span>07</span>
+            <div>
+              <small>TASK 7</small>
+              <h2>UseContext and useReducer</h2>
+            </div>
+          </>
+        )}
       </div>
 
       {/* TASK CONTENT */}
@@ -169,7 +190,9 @@ function Home({ selectedTask, setSelectedTask, onLogout }) {
         
         {selectedTask === "task5" && <Task5 />}
 
-         {selectedTask === "task6" && <Task6 />}
+        {selectedTask === "task6" && <Task6 />}
+
+       {selectedTask === "task7" && <Task7 />}
         
       </main>
     </div>
