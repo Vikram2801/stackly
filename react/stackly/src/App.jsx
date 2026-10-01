@@ -9,6 +9,7 @@ import WebDevelopment from "./sevices/webDevelopement";
 import UiUxDesign from "./sevices/uiuxDesign";
 import AppDevelopment from "./sevices/appDevelopement";
 import "./App.css";
+import TicTacToe from "./components/tictactoe/TicTacToe";
 
 function ServicesOverview() {
   return (
@@ -41,6 +42,7 @@ function App() {
         </Route>
         <Route path="products" element={<Product />} />
         <Route path="contact" element={<Contact />} />
+        <Route path="tictactoe" element={<TicTacToe/>} />
         <Route path="*" element={<Navigate to="/" replace />} />
       </Route>
     </Routes>

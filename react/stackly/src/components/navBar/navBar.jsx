@@ -1,4 +1,4 @@
-import { ArrowUpRight, Home, Layers3, Package, Sparkles, User, UserRound } from "lucide-react";
+import { ArrowUpRight, Gamepad, Home, Layers3, Package, Sparkles, User, UserRound } from "lucide-react";
 import { Link, NavLink } from "react-router-dom";
 import "./navBar.css";
 
@@ -8,6 +8,7 @@ const navigation = [
   { to: "/services", label: "Services", icon: Layers3 },
   { to: "/products", label: "Products", icon: Package },
   { to: "/contact", label: "contact", icon: User },
+  { to: "/tictactoe", label: "TicTacToe Game", icon: Gamepad },
 ];
 
 export default function NavBar() {
