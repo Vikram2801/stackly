@@ -45,7 +45,6 @@ export default function Userdetails() {
         <div className="users-message">
           <div className="loader">
             <h3>Loading User...</h3>
-            <p>Please wait while we fetch the user data.</p>
           </div>
         </div>
       </div>

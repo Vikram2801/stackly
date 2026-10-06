@@ -12,6 +12,7 @@ import "./App.css";
 import TicTacToe from "./components/tictactoe/TicTacToe";
 import User from "./pages/User";
 import Userdetails from "./pages/Userdetails";
+import PaginationUsers from "./pages/PaginationUsers";
 
 function ServicesOverview() {
   return (
@@ -48,6 +49,7 @@ function App() {
         <Route path="tictactoe" element={<TicTacToe/>} />
         <Route path="users" element={<User/>}/>
         <Route path="users/:id" element={<Userdetails/>}/>
+        <Route path="users-table" element={<PaginationUsers/>}/>
         <Route path="*" element={<Navigate to="/" replace />} />
       </Route>
     </Routes>

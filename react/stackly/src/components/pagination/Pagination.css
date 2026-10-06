@@ -1,0 +1,265 @@
+
+.pagination-page {
+  width: 100%;
+  max-width: 1150px;
+  min-height: calc(100vh - 72px);
+  margin: 0 auto;
+  padding: 40px 25px;
+  color: #f8fafc;
+}
+
+.pagination-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.pagination-label {
+  margin: 0 0 8px;
+  color: #818cf8;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.pagination-header h1 {
+  margin: 0 0 8px;
+  font-size: 32px;
+}
+
+.pagination-header p {
+  margin: 0;
+  color: #94a3b8;
+  font-size: 14px;
+}
+
+.record-count {
+  padding: 10px 15px;
+  border: 1px solid rgba(99, 102, 241, 0.25);
+  border-radius: 9px;
+  background: rgba(99, 102, 241, 0.1);
+  color: #a5b4fc;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+/* Table */
+
+.table-wrapper {
+  overflow-x: auto;
+  border: 1px solid rgba(148, 163, 184, 0.12);
+  border-radius: 16px;
+  background: #0f172a;
+}
+
+.user-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 700px;
+}
+
+.user-table th {
+  padding: 16px 18px;
+  border-bottom: 1px solid #1e293b;
+  background: #111827;
+  color: #64748b;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.user-table td {
+  padding: 17px 18px;
+  border-bottom: 1px solid rgba(148, 163, 184, 0.07);
+  color: #cbd5e1;
+  font-size: 12px;
+}
+
+.user-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.user-table tbody tr {
+  transition: background 0.2s ease;
+}
+
+.user-table tbody tr:hover {
+  background: rgba(99, 102, 241, 0.05);
+}
+
+.user-id-badge {
+  padding: 5px 8px;
+  border-radius: 6px;
+  background: rgba(99, 102, 241, 0.1);
+  color: #a5b4fc;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.table-user {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.table-avatar {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  color: white;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.table-user strong {
+  display: block;
+  margin-bottom: 4px;
+  color: #f1f5f9;
+  font-size: 12px;
+}
+
+.table-user small {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: #64748b;
+  font-size: 9px;
+}
+
+.table-info {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  color: #94a3b8;
+}
+
+.table-info svg {
+  flex-shrink: 0;
+  color: #818cf8;
+}
+
+.age-badge {
+  padding: 5px 9px;
+  border-radius: 6px;
+  background: rgba(34, 197, 94, 0.08);
+  color: #86efac;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+/* Pagination */
+
+.pagination-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+  margin-top: 25px;
+}
+
+.pagination-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 110px;
+  padding: 11px 16px;
+  border: 1px solid #334155;
+  border-radius: 9px;
+  background: #111827;
+  color: #cbd5e1;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.pagination-button:hover:not(:disabled) {
+  border-color: #6366f1;
+  background: rgba(99, 102, 241, 0.1);
+  color: white;
+}
+
+.pagination-button:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+.page-info {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #64748b;
+  font-size: 12px;
+}
+
+.page-info strong {
+  min-width: 32px;
+  padding: 7px 10px;
+  border-radius: 7px;
+  background: #6366f1;
+  color: white;
+  text-align: center;
+}
+
+/* URL information */
+
+.url-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 22px;
+  color: #64748b;
+  font-size: 11px;
+}
+
+.url-info code {
+  padding: 6px 10px;
+  border-radius: 6px;
+  background: #020617;
+  color: #a5b4fc;
+}
+
+/* Responsive */
+
+@media (max-width: 650px) {
+  .pagination-page {
+    padding: 25px 15px;
+  }
+
+  .pagination-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .pagination-header h1 {
+    font-size: 26px;
+  }
+
+  .record-count {
+    width: 100%;
+    text-align: center;
+  }
+
+  .pagination-controls {
+    gap: 10px;
+  }
+
+  .pagination-button {
+    min-width: 95px;
+    padding: 10px;
+    font-size: 11px;
+  }
+
+  .url-info {
+    flex-direction: column;
+  }
+}
