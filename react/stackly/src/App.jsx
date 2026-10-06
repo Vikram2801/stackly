@@ -10,6 +10,8 @@ import UiUxDesign from "./sevices/uiuxDesign";
 import AppDevelopment from "./sevices/appDevelopement";
 import "./App.css";
 import TicTacToe from "./components/tictactoe/TicTacToe";
+import User from "./pages/User";
+import Userdetails from "./pages/Userdetails";
 
 function ServicesOverview() {
   return (
@@ -39,10 +41,13 @@ function App() {
           <Route path="web-development" element={<WebDevelopment />} />
           <Route path="ui-ux-design" element={<UiUxDesign />} />
           <Route path="app-development" element={<AppDevelopment />} />
+          
         </Route>
         <Route path="products" element={<Product />} />
         <Route path="contact" element={<Contact />} />
         <Route path="tictactoe" element={<TicTacToe/>} />
+        <Route path="users" element={<User/>}/>
+        <Route path="users/:id" element={<Userdetails/>}/>
         <Route path="*" element={<Navigate to="/" replace />} />
       </Route>
     </Routes>

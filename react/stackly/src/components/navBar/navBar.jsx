@@ -9,6 +9,8 @@ const navigation = [
   { to: "/products", label: "Products", icon: Package },
   { to: "/contact", label: "contact", icon: User },
   { to: "/tictactoe", label: "TicTacToe Game", icon: Gamepad },
+  { to: "/users", label: "Users", icon: User },
+
 ];
 
 export default function NavBar() {
