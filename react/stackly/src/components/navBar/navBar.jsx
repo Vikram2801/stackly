@@ -11,6 +11,7 @@ const navigation = [
   { to: "/tictactoe", label: "TicTacToe Game", icon: Gamepad },
   { to: "/users", label: "Users", icon: User },
   { to: "/users-table", label: "UsersTable", icon: User },
+  { to: "/users-axios", label: "UseAxios", icon: User },
 
 ];
 
