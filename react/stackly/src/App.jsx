@@ -14,6 +14,7 @@ import User from "./pages/User";
 import Userdetails from "./pages/Userdetails";
 import PaginationUsers from "./pages/PaginationUsers";
 import AxiosUser from "./components/AxiosUser/AxiosUser";
+import UsersCRUD from "./components/usercrud/UserCrud";
 
 function ServicesOverview() {
   return (
@@ -52,6 +53,7 @@ function App() {
         <Route path="users/:id" element={<Userdetails/>}/>
         <Route path="users-table" element={<PaginationUsers/>}/>
         <Route path="users-axios" element={<AxiosUser/>}/>
+        <Route path="Crud" element={<UsersCRUD/>}/>
         <Route path="*" element={<Navigate to="/" replace />} />
       </Route>
     </Routes>

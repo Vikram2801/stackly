@@ -12,6 +12,7 @@ const navigation = [
   { to: "/users", label: "Users", icon: User },
   { to: "/users-table", label: "UsersTable", icon: User },
   { to: "/users-axios", label: "UseAxios", icon: User },
+   { to: "/Crud", label: "CRUD Operation", icon: Package },
 
 ];
 
